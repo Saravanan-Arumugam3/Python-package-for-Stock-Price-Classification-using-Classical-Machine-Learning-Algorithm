@@ -31,8 +31,6 @@ data = api.alpaca_data(API_KEY = 'PKL6FLMQP9AR37P9DG3M',
 # model.train(X= X_train, y=y_train.to_numpy(), num_epochs=10, learning_rate=0.01)
 print("need fixing")
 
-return
-
 
 model = Logistic_Regression(X,y)
 model.fit()
