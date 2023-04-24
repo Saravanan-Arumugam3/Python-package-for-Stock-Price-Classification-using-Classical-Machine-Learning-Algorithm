@@ -18,38 +18,26 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-# In[2]:
-
-def data():
-    data = api.alpaca_data(API_KEY = 'PKL6FLMQP9AR37P9DG3M',
-                 SECRET_KEY = 'P2eGMaIyezfGgSoPjD2pbafdi0wnMwncFJfdjvsy',
-                 BASE_URL = 'https://paper-api.alpaca.markets', 
-                 start_date = '2022-01-01', 
-                 end_date = '2022-12-31',
-                 symbol = 'AAPL')
-    
-    
-    X,y = data.data_gen()
-    
-    
-    return X, y
-
-def NN():
-    # model = NeuralNetwork(input_size=X_train.shape[1], hidden_size=2, output_size=1)
-    # model.train(X= X_train, y=y_train.to_numpy(), num_epochs=10, learning_rate=0.01)
-    print("need fixing")
-    
-    return
+data = api.alpaca_data(API_KEY = 'PKL6FLMQP9AR37P9DG3M',
+             SECRET_KEY = 'P2eGMaIyezfGgSoPjD2pbafdi0wnMwncFJfdjvsy',
+             BASE_URL = 'https://paper-api.alpaca.markets', 
+             start_date = '2022-01-01', 
+             end_date = '2022-12-31',
+             symbol = 'AAPL')
 
 
-# In[5]:
 
-def lr():
-    model = Logistic_Regression(X,y)
-    model.fit()
-    model.performance_metrics()
-    model.y_prediction
-    
-    return
+# model = NeuralNetwork(input_size=X_train.shape[1], hidden_size=2, output_size=1)
+# model.train(X= X_train, y=y_train.to_numpy(), num_epochs=10, learning_rate=0.01)
+print("need fixing")
+
+return
+
+
+model = Logistic_Regression(X,y)
+model.fit()
+model.performance_metrics()
+model.y_prediction
+
 
     
